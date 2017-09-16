@@ -14,11 +14,17 @@ class LandingPage extends React.Component {
   };
 
   componentWillMount() {
+    this.state = { loading: true };
     const { cookies } = this.props;
     const token = cookies.get("token");
-    const isLoggedIn = this.verifyToken(token);
+    if (!token) {
+      this.state = { loading: false, isLoggedIn: false };
+      return;
+    }
 
-    this.state = { isLoggedIn: isLoggedIn, token: token };
+    this.verifyToken(token).then(result => {
+      this.setState({ isLoggedIn: result, token: token, loading: false });
+    });
   }
 
   verifyToken = token => {
@@ -47,12 +53,15 @@ class LandingPage extends React.Component {
   };
 
   render() {
+    if (this.state.loading) {
+      return <p>loading...</p>;
+    }
+
     if (!this.state.isLoggedIn) {
       return (
         <Redirect
           to={{
-            pathname: "/signup",
-            state: { isLoggedIn: false }
+            pathname: "/signup"
           }}
         />
       );
