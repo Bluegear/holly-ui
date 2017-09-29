@@ -10,7 +10,7 @@ class Footer extends React.Component {
     return (
       <div className="Footer">
         <footer className="footer">
-          <div className="container">
+          <div className="container is-fluid">
             <div className="content has-text-centered">
               <p>
                 <strong>

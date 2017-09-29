@@ -1,1 +1,41 @@
+.order-form {
+  margin: 2.5rem 0;
+}
 
+.bd-notification {
+  background-color: whitesmoke;
+  border-radius: 3px;
+  padding: 2.6rem 0;
+  position: relative;
+  text-align: center;
+  margin: 1.5rem 0;
+  cursor: pointer;
+}
+
+.bd-notification.is-danger {
+  background-color: #ff3860;
+  color: #fff;
+}
+
+.bd-notification.is-danger:hover,
+.bd-notification.is-danger.is-hovered {
+  background-color: #ff2b56;
+  border-color: transparent;
+  color: #fff;
+}
+
+.bd-notification.is-success {
+  background-color: #23d160;
+  color: #fff;
+}
+
+.bd-notification.is-success:hover,
+.bd-notification.is-success.is-hovered {
+  background-color: #22c65b;
+  border-color: transparent;
+  color: #fff;
+}
+
+.field-label {
+  text-align: left;
+}

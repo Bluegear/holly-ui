@@ -88,7 +88,7 @@ class Header extends React.Component {
     return (
       <div className="Header">
         <nav className="navbar is-light" aria-label="main navigation">
-          <div className="container">
+          <div className="container is-fluid">
             <div className="navbar-brand">
               <a className="navbar-item" href="/">
                 <h1 className="title">HollyX</h1>

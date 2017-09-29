@@ -1,11 +1,11 @@
 import React from "react";
-import "./App.css";
 import SignIn from "./SignIn";
 import SignUp from "./SignUp";
 import LandingPage from "./LandingPage";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 require("font-awesome/css/font-awesome.min.css");
 require("bulma/css/bulma.css");
+require("./App.css");
 
 class App extends React.Component {
   render() {
